@@ -12,5 +12,5 @@ jobs:
         key: ${{ secrets.SERVER_SSH_KEY }}
         known_hosts: ${{ secrets.SERVER_SSH_KEY }}
     - name: rsync over ssh
-      run: rsync  ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}
+      run: rsync StrictHostKeyChecking=no ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}
   
