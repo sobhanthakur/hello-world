@@ -14,5 +14,5 @@ jobs:
     - name: rsync over ssh
       run: |
         rsync -a  -e "ssh -o StrictHostKeyChecking=no" ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/home/ubuntu/deploy.sh
-        ssh -o StrictHostKeyChecking=no ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "./deplo.sh"
+        ssh -o StrictHostKeyChecking=no ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} "./deploy.sh"
   
