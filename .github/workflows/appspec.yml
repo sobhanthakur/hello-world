@@ -6,10 +6,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: installs php
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
     - name: Deploy to Staging server
       uses: easingthemes/ssh-deploy@main
       env:
@@ -17,5 +13,5 @@ jobs:
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
     - name: Take git pull
-      run: ~/deploy.sh
+      run: /home/ubuntu/deploy.sh
   
