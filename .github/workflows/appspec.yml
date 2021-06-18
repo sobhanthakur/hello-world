@@ -12,5 +12,5 @@ jobs:
         key: ${{ secrets.SERVER_SSH_KEY }}
         known_hosts: ${{ secrets.SERVER_SSH_KEY }}
     - name: rsync over ssh
-      run: rsync  -a ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/home/ubuntu /home/ubuntu
+      run: rsync  ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}
   
